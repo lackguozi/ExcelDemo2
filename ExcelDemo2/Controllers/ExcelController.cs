@@ -48,7 +48,7 @@ namespace ExcelDemo2.Controllers
                     int startMergeRow = -1;
                     string previousValue = null;
 
-                    for (int row = 1; row <= rowCount; row++) // 从第一行开始遍历  
+                    for (int row = 2; row <= rowCount; row++) // 从第一行开始遍历  
                     {
                         ExcelRangeBase cell = ws.Cells[row, column];
                         string currentValue = cell.Value?.ToString();
@@ -122,6 +122,14 @@ namespace ExcelDemo2.Controllers
                      Qty = 5,
                      Sn = "8712wwff"
 
+                 },
+                  new() {
+                     Code ="2111",
+                     Name ="测试2",
+                     SkuCode = "10902",
+                     SkuName="产品编制",
+                     Qty = 5,
+                     Sn = "8712wwff"
                  }
             ];
         }
